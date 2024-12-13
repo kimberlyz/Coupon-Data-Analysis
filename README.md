@@ -86,16 +86,26 @@ Here are the reasonings behind why I could do each step.
 ## Data Analysis / Manipulation
 **Overview of Data**
 
-I got a general overview of the data by doing
+Here is a preview of some of the actual values of the dataset: 
+![data example](https://github.com/user-attachments/assets/ac414f8b-c1c4-43be-b620-f943167f34fd)
+
+I got a general overview of the data by doing:
 1. `df.describe()` - gets stats like the count, mean, std, quartiles, etc. of all the quantitative columns
 2. `df.columns` - took a look at what columns existed
 3. `df[col_name].value_counts()` - take a look at what values exist per column
+4. Some plots
 
-**Plots**
+We can see out of the entire cleaned dataset, 56.85% of people accepted the coupon.
+
+<img src="https://github.com/user-attachments/assets/3ae88072-fb01-43b2-ae32-1e434962b8e5" width=300/>
+
+We can also see that the most popular coupons were Carry Out and Restaurants(<20), while the least popular coupon was Bar. 
+
+<img src="https://github.com/user-attachments/assets/96111a24-558a-4384-8e38-a0fab1e7c0fc" width=450/>
 
 **One Hot Encoding and Correlation Analysis**
 
-Then, I wanted to explore correlations with one hot encoding. 
+Once I got a general data overview, I then wanted to explore correlations with one hot encoding. 
 I only wanted to one hot encode categorical columns if they didn't have too many unique values - that way the dimensionality of the data doesn't increase too greatly. I ended up one hot encoding columns with <= 5 unique values, and ended up adding 59 more columns. After one hot encoding I ended up with 71 columns, which still seemed manageable.
 
 I saw a natural division in the data between correlations above 0.1 and below -0.1 as follows.
