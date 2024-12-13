@@ -1,6 +1,8 @@
 # Coupon Data Analysis
 
-In this assignment, our task is to answer the question “Will a customer accept the coupon?” - essentially giving a recommendation on how to optimize a coupon campaign to yield the best coupon acceptance results. The details of the coupon campaign involve delivering digital coupons to drivers in various redemption categories - a bar, a coffee shop, a cheaper restaurant (under $20), and a more expensive restaurant ($20 - $50). You can see the full code for the data cleaning and analysis steps in the Jupyter Notebook CouponRecommendation.ipynb. This ReadMe will contain a summary of the code and data analysis process in that file. 
+In this assignment, our task is to answer the question “Will a customer accept the coupon?” - essentially giving a recommendation on how to optimize a coupon campaign to yield the best coupon acceptance results. The details of the coupon campaign involve delivering digital coupons to drivers in various redemption categories - a bar, a coffee shop, a cheaper restaurant (under $20), and a more expensive restaurant ($20 - $50). 
+
+You can see the full code for the data cleaning and analysis steps in the Jupyter notebook CouponRecommendation.ipynb. This ReadMe will contain a summary of the code and data analysis process in that file. 
 
 We were given the Problem Statement below.
 
