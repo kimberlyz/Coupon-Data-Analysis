@@ -64,16 +64,16 @@ The attributes of this data set include:
     - time before it expires: 2 hours or one day
 
 ## Data Cleaning
-Before I start analyzing the data, I want to perform some data cleaning. 
+Before I started analyzing the data, I wanted to perform some data cleaning. 
 
 The data cleaning steps performed were the following.
 
 1. Removed duplicates
 2. Removed car column
 3. Removed rows with NaN in them
-4. Standardize column names and fix typos in names
+4. Standardized column names and fixed typos in names
 
-After all the steps above, I end up with 12,007 rows x 25 columns instead of the original 12,684 rows × 26 columns.
+After all the steps above, I ended up with 12,007 rows x 25 columns instead of the original 12,684 rows × 26 columns.
 
 Here are the reasonings behind why I could do each step.
 
@@ -83,7 +83,7 @@ Here are the reasonings behind why I could do each step.
 
 3. Removed rows with NaN in them: Because the percentage of rows containing an NaN value is < 5% of all the data, I think it's okay to drop those rows as there's still enough rows left to analyze.
 
-4. Standardize column names and fix typos in names: To make it easier to remember what the column names are when typing them out, let's fix any typos and standardize the column names into snakecase.
+4. Standardized column names and fixed typos in names: To make it easier to remember what the column names are when typing them out, let's fix any typos and standardize the column names into snakecase.
 
 ## Data Analysis / Manipulation
 **Overview of Data**
@@ -108,7 +108,7 @@ We can also see that the most popular coupons were Carry Out and Restaurants(<20
 **One Hot Encoding and Correlation Analysis**
 
 Once I got a general data overview, I then wanted to explore correlations with one hot encoding. 
-I only wanted to one hot encode categorical columns if they didn't have too many unique values - that way the dimensionality of the data doesn't increase too greatly. I ended up one hot encoding columns with <= 5 unique values, and ended up adding 59 more columns. After one hot encoding I ended up with 71 columns, which still seemed manageable.
+I only wanted to one hot encode categorical columns if they didn't have too many unique values - that way the dimensionality of the data doesn't increase too greatly. I ended up one hot encoding columns with <= 5 unique values, and ended up adding 59 more columns. After one hot encoding I ended up with 71 columns, which still seemed manageable to analyze.
 
 I saw a natural division in the data between correlations above 0.1 and below -0.1 as follows.
 | Column Name | Correlation |
@@ -129,13 +129,13 @@ I saw a natural division in the data between correlations above 0.1 and below -0
 |expiration_2h          |-0.131872|
 |coffee_never           |-0.129865|
 
-Thus, people are more likely to accept the coupon if one of the column names is true in the positive correlations table. And people are less likely to accept the coupon if one of the column names is true in the negative correlations table.
+Thus, people are more likely to accept the coupon if one of the column name values is true in the positive correlations table. And people are less likely to accept the coupon if one of the column name values is true in the negative correlations table.
 
 **Percentage Acceptance Rate Per Column**
 
 I then was curious about the highest percentage coupon acceptance rates per column value. For example, choosing a column value like "people who received a bar coupon", and seeing that out of all "people who received a bar coupon", how many of them ended up accepting the coupon.
 
-I then got the following with the highest acceptance rates. 
+I got the following columns with the highest acceptance rates. 
 
 | Column Value | Percentage Coupon Accpet |
 |-| -|
